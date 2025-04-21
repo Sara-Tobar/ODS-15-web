@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+  <link rel="icon" type="image/png" href="imagen/planta2.png">
+  <title>Gaia Viva</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="min-h-screen text-lg bg-gray-50">
+  <!-- Navbar -->
+  <nav class="bg-green-700 text-white p-4 sticky top-0 z-10">
+    <div class="max-w-7xl mx-auto flex justify-between items-center">
+      <div class="flex items-center space-x-2">
+        <img src="imagen/planta1.png" alt="logo" class="h-8">
+        <a href="#" class="text-xl font-bold">Gaia Viva</a>
+      </div>
+      <div class="hidden md:flex space-x-4">
+        <a href="#inicio" class="hover:text-gray-200">Inicio</a>
+        <a href="#proyectos" class="hover:text-gray-200">Proyectos</a>
+        <div class="relative group">
+          <button class="hover:text-gray-200">Sobre el ODS 15</button>
+          <div class="absolute hidden group-hover:block bg-green-600 text-white rounded shadow-lg mt-2">
+            <a href="#" class="block px-4 py-2 hover:bg-green-700">Biodiversidad</a>
+            <a href="#" class="block px-4 py-2 hover:bg-green-700">Bosques</a>
+            <hr class="border-green-500">
+            <a href="#" class="block px-4 py-2 hover:bg-green-700">Desertificación</a>
+          </div>
+        </div>
+        <a href="#contacto" class="hover:text-gray-200">Contacto</a>
+      </div>
+      <button class="md:hidden focus:outline-none" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+        </svg>
+      </button>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden mt-4 space-y-2">
+      <a href="#inicio" class="block hover:text-gray-200">Inicio</a>
+      <a href="#proyectos" class="block hover:text-gray-200">Proyectos</a>
+      <a href="#" class="block hover:text-gray-200">Sobre el ODS 15</a>
+      <a href="#contacto" class="block hover:text-gray-200">Contacto</a>
+    </div>
+  </nav>
+
+  <!-- Banner -->
+  <section id="inicio" class="bg-green-100 py-16 text-center bg-[url('/imagen/bosque.jpg')] bg-cover bg-center">
+    <div class="max-w-4xl mx-auto px-4 bg-white bg-opacity-80 rounded-lg py-8">
+      <h1 class="text-4xl md:text-5xl font-bold text-green-800 mb-4">Gaia Viva: Salvando Nuestros Ecosistemas</h1>
+      <p class="text-lg text-gray-700 mb-6">
+        Gaia Viva es una iniciativa dedicada a proteger la vida terrestre, alineada con el ODS 15. A través de proyectos de reforestación, conservación de biodiversidad y educación ambiental, trabajamos para restaurar ecosistemas y empoderar comunidades hacia un futuro sostenible.
+      </p>
+      <a href="#proyectos" class="inline-block bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 transition">
+        Conoce Nuestros Proyectos
+      </a>
+    </div>
+  </section>
+
+  <!-- Carrusel con Swiper-->
+  <div class="swiper relative h-96">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <img src="imagen/bosque.jpg" alt="Bosque" class="w-full h-full object-cover">
+        <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white text-center">
+          <div>
+            <h2 class="text-2xl md:text-3xl font-bold">"Los bosques son el pulmón del planeta"</h2>
+            <p class="mt-2">Promoviendo la reforestación para un mundo más verde.</p>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <img src="imagen/rana.png" alt="Fauna" class="w-full h-full object-cover">
+        <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white text-center">
+          <div>
+            <h2 class="text-2xl md:text-3xl font-bold">"Cada especie cuenta"</h2>
+            <p class="mt-2">Proteger la biodiversidad es proteger nuestro futuro.</p>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <img src="imagen/suelo.png" alt="Suelo" class="w-full h-full object-cover">
+        <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white text-center">
+          <div>
+            <h2 class="text-2xl md:text-3xl font-bold">"Cuidar el suelo es cuidar la vida"</h2>
+            <p class="mt-2">Combatir la desertificación con prácticas sostenibles.</p>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <img src="imagen/humedal.jpg" alt="Humedal" class="w-full h-full object-cover">
+        <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white text-center">
+          <div>
+            <h2 class="text-2xl md:text-3xl font-bold">"Los humedales son vida"</h2>
+            <p class="mt-2">Restaurando ecosistemas para la fauna y flora.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Botones de navegación -->
+    <div class="swiper-button-prev bg-green-700 text-white p-2 rounded hover:bg-green-800"></div>
+    <div class="swiper-button-next bg-green-700 text-white p-2 rounded hover:bg-green-800"></div>
+  </div>
+
+  <!-- Nuestro Impacto -->
+  <section id="impacto" class="py-16 bg-gray-100">
+    <div class="max-w-7xl mx-auto px-4 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold text-green-800 mb-8">Nuestro Impacto</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="bg-white p-6 rounded-lg shadow-lg">
+          <h3 class="text-xl font-semibold text-green-700 mb-2">10,000 Árboles Plantados</h3>
+          <p class="text-gray-600">Desde 2023, hemos restaurado bosques en 5 regiones, creando hábitats para la fauna local.</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-lg">
+          <h3 class="text-xl font-semibold text-green-700 mb-2">50 Especies Protegidas</h3>
+          <p class="text-gray-600">Colaboramos con reservas para conservar aves, mamíferos y reptiles en peligro.</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-lg">
+          <h3 class="text-xl font-semibold text-green-700 mb-2">1,000 Personas Educadas</h3>
+          <p class="text-gray-600">Nuestros talleres han empoderado a comunidades para gestionar recursos de forma sostenible.</p>
+        </div>
+      </div>
+      <a href="#contacto" class="mt-8 inline-block bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 transition">
+        Únete a Nuestra Misión
+      </a>
+    </div>
+  </section>
+
+  <!-- Cards -->
+  <div id="proyectos" class="max-w-7xl mx-auto mt-10 grid grid-cols-1 md:grid-cols-3 gap-6 px-4">
+    <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+      <img src="imagen/reforest.png" alt="Reforestación" class="w-full h-48 object-cover">
+      <div class="p-4">
+        <h5 class="text-xl font-semibold">Proyecto de Reforestación</h5>
+        <p class="text-gray-600">Plantamos 1,000 árboles nativos para restaurar un bosque degradado en 2024.</p>
+        <a href="#" class="mt-2 inline-block bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700">Ver más</a>
+      </div>
+    </div>
+    <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+      <img src="imagen/aves.png" alt="Biodiversidad" class="w-full h-48 object-cover">
+      <div class="p-4">
+        <h5 class="text-xl font-semibold">Protección de Fauna</h5>
+        <p class="text-gray-600">Programa para conservar especies en peligro en humedales.</p>
+        <a href="#" class="mt-2 inline-block bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700">Ver más</a>
+      </div>
+    </div>
+    <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+      <img src="imagen/educacion.jpg" alt="Sostenibilidad" class="w-full h-48 object-cover">
+      <div class="p-4">
+        <h5 class="text-xl font-semibold">Educación Ambiental</h5>
+        <p class="text-gray-600">Talleres para enseñar a comunidades sobre la gestión sostenible de recursos.</p>
+        <a href="#" class="mt-2 inline-block bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700">Ver más</a>
+      </div>
+    </div>
+    <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+      <img src="imagen/desertificacion.png" alt="Desertificación" class="w-full h-48 object-cover">
+      <div class="p-4">
+        <h5 class="text-xl font-semibold">Lucha contra la Desertificación</h5>
+        <p class="text-gray-600">Iniciativa para restaurar suelos áridos con técnicas de permacultura.</p>
+        <a href="#" class="mt-2 inline-block bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700">Ver más</a>
+      </div>
+    </div>
+    <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+      <img src="imagen/arte_ambiental.jpg" alt="Arte Ambiental" class="w-full h-48 object-cover">
+      <div class="p-4">
+        <h5 class="text-xl font-semibold">Exposición de Arte Ambiental</h5>
+        <p class="text-gray-600">Serie de obras que retratan la belleza de los ecosistemas para crear conciencia.</p>
+        <a href="#" class="mt-2 inline-block bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700">Ver más</a>
+      </div>
+    </div>
+    <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+      <img src="imagen/reciclaje.png" alt="Reciclaje" class="w-full h-48 object-cover">
+      <div class="p-4">
+        <h5 class="text-xl font-semibold">Campaña de Reciclaje</h5>
+        <p class="text-gray-600">Promoviendo el reciclaje creativo para reducir residuos en comunidades locales.</p>
+        <a href="#" class="mt-2 inline-block bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700">Ver más</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer id="contacto" class="bg-green-700 text-white py-8 mt-10">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div>
+          <h5 class="text-xl font-semibold">Contacto</h5>
+          <p>Email: <a href="vidaterreste@gaiaviva.org" class="text-white hover:underline">vidaterreste@gaiaviva.org</a></p>
+          <p>Teléfono: +123 456 7890</p>
+        </div>
+        <div>
+          <h5 class="text-xl font-semibold">Sígueme</h5>
+          <ul class="flex space-x-4 justify-center md:justify-start">
+            <li><a href="#" class="text-white hover:text-gray-200">Instagram</a></li>
+            <li><a href="#" class="text-white hover:text-gray-200">Twitter</a></li>
+            <li><a href="#" class="text-white hover:text-gray-200">LinkedIn</a></li>
+          </ul>
+        </div>
+      </div>
+      <p class="text-center mt-6">© 2025 Gaia Viva | Comprometido con el ODS 15: Vida de Ecosistemas Terrestres</p>
+    </div>
+  </footer>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <!-- Inicializar Swiper -->
+  <script>
+    new Swiper('.swiper', {
+      loop: true, // Hace que el carrusel sea cíclico
+      autoplay: {
+        delay: 5000, // Cambia cada 5 segundos
+        disableOnInteraction: false, // Sigue funcionando tras interactuar
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+  </script>
+</body>
+</html>
